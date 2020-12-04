@@ -32,10 +32,9 @@ services:
     depends_on:
       - bookstack
       - mysql
-    environment:
-      HOST: localhost
     ports:
-      - "80:80"
+      - 80:80
+      - 443:443
     volumes:
       - ./bookstack_proxy/nginx.conf:/etc/nginx/nginx.conf:ro
       - ./bookstack_proxy/certificates:/etc/nginx/certificates
